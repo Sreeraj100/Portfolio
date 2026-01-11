@@ -5,16 +5,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sreeraj-Portfolio </title>
+    <meta name="description"
+        content="Sreeraj R - MERN Stack Developer | Full Stack Web Developer specializing in MongoDB, Express.js, React.js, and Node.js" />
+    <meta name="keywords"
+        content="MERN Stack Developer, Full Stack Developer, Web Developer, React, Node.js, MongoDB" />
+    <meta name="author" content="Sreeraj R" />
+    <title>Sreeraj R</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- box icons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
+    <!-- Font Awesome for skill icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
     <link rel="stylesheet" href="style.css" />
 
     <!-- ajax script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
@@ -27,10 +40,9 @@
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#education">Education</a>
-            <a href="#portfolio">Projects</a>
             <a href="#skills">Skills</a>
+            <a href="#portfolio">Projects</a>
+            <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </nav>
 
@@ -38,36 +50,54 @@
     <!-- home section design -->
 
     <section class="home" id="home">
+        <div class="hero-bg-animation"></div>
 
-        <div class="home-content">
-
-            <h3>Hello, It's Me</h3>
-            <h1>SREERAJ R</h1>
-            <h3>And I'm a <span class="multiple-text">MERN STACK DEVELOPER</span></h3>
-            <p> passionate Full Stack Web Developer with expertise in crafting engaging and responsive web experiences
-                using HTML, CSS, and JavaScript</p>
-
-            <div class="social-media">
-                <a href="https://www.facebook.com/sreeraj.r.1848/" target="_blank"><i class='bx bxl-facebook'></i></a>
-                <a href="https://www.linkedin.com/in/sreeraj-r-/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://www.instagram.com/sreeraj._.manu/" target="_blank"><i
-                        class='bx bxl-instagram-alt'></i></a>
-                <a href="https://leetcode.com/u/Sreeraj179/" target="_blank"><img src="leet-img.png"
-                        style="margin-top: -7px;" /></i></a>
-                <a href="https://github.com/Sreeraj100" target="_blank"><i class='bx bxl-github'></i></a>
-
+        <div class="home-content" data-scroll-reveal>
+            <div class="hero-text-wrapper">
+                <h3 class="hero-greeting">Hello, It's Me</h3>
+                <h1 class="hero-name">SREERAJ R</h1>
+                <h3 class="hero-title">And I'm a <span class="multiple-text">MERN STACK DEVELOPER</span></h3>
+                <p class="hero-description">Passionate Full Stack Web Developer with expertise in crafting engaging and
+                    responsive web experiences using modern technologies</p>
             </div>
 
+            <div class="social-media">
+                <a href="https://www.facebook.com/sreeraj.r.1848/" target="_blank" class="social-link"
+                    aria-label="Facebook">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sreeraj-r-/" target="_blank" class="social-link"
+                    aria-label="LinkedIn">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://www.instagram.com/sreeraj._.manu/" target="_blank" class="social-link"
+                    aria-label="Instagram">
+                    <i class='bx bxl-instagram-alt'></i>
+                </a>
+                <a href="https://leetcode.com/u/Sreeraj179/" target="_blank" class="social-link" aria-label="LeetCode">
+                    <img src="images/Projects/leet-img.png" alt="LeetCode" style="margin-top: -7px;" />
+                </a>
+                <a href="https://github.com/Sreeraj100" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class='bx bxl-github'></i>
+                </a>
+            </div>
 
-            <a href="RESUME.pdf" target="_blank" class="btn">Download CV</a>
-            <a href="https://mail.google.com/mail/u/0/?fs=1&to=sreerajsrgmanu@gmail.com &su=Interested+in+hiring+you&body=Hello+Sreeraj.R&tf=cm"
-                target="_blank" id="btn-2">Let's Talk</a>
-
-
+            <div class="cta-buttons">
+                <a href="images/RESUME.pdf" target="_blank" class="btn btn-primary magnetic-btn">
+                    <span>Download CV</span>
+                    <i class='bx bx-download'></i>
+                </a>
+                <a href="https://mail.google.com/mail/u/0/?fs=1&to=sreerajsrgmanu@gmail.com&su=Interested+in+hiring+you&body=Hello+Sreeraj.R&tf=cm"
+                    target="_blank" class="btn btn-secondary magnetic-btn">
+                    <span>Let's Talk</span>
+                    <i class='bx bx-message-dots'></i>
+                </a>
+            </div>
         </div>
 
-        <div class="home-img">
-            <img src="My photo.png" alt="">
+        <div class="home-img" data-scroll-reveal>
+            <div class="img-glow"></div>
+            <img src="images/sreeraj.jpg" alt="Sreeraj R - MERN Stack Developer">
         </div>
     </section>
 
@@ -76,7 +106,7 @@
 
     <section class="about" id="about">
         <div class="about-img">
-            <img src="My photo.png" alt="">
+            <img src="images/MyPhoto.png" alt="">
         </div>
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
@@ -85,47 +115,373 @@
                 to turn ideas into dynamic web applications. With a strong foundation in front-end and back-end
                 development, I thrive on creating seamless, user-friendly experiences. My portfolio is a reflection of
                 my commitment to continuous learning and growth in the world of web development.</P>
-            <a href="https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg?w=1060&t=st=1696363218~exp=1696363818~hmac=94af7bfdb93605088aa385f2de866f7c243965c7bf821c358b75fe1ba7432480"
-                target="_blank" class="btn">Read more</a>
         </div>
     </section>
 
-    <!-- services section design -->
 
-    <section class="services" id="services">
-        <h2 class="heading">our<span>services</span></h2>
 
-        <div class="services-container">
-            <div class="services-box">
-                <i class='bx bx-code-alt'></i>
-                <h3>Web Development</h3>
-                <p>ideas into stunning, functional, and user-centric websites and web applications. As my skilled HTML,
-                    CSS, and JavaScript developers, my passionate about crafting online experiences that captivate,
-                    engage, and drive results.</p>
-                <a href="https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg?w=1060&t=st=1696363218~exp=1696363818~hmac=94af7bfdb93605088aa385f2de866f7c243965c7bf821c358b75fe1ba7432480"
-                    target="_blank" class="btn">read More</a>
+    <!-- skills section design -->
+
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <p class="section-subtitle">Technologies I work with</p>
+
+        <div class="skills-container">
+            <!-- Frontend Skills -->
+            <div class="skill-category" data-scroll-reveal>
+                <div class="category-header">
+                    <i class='bx bx-code-alt category-icon'></i>
+                    <h3>Frontend</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card" title="HTML5">
+                        <div class="skill-icon">
+                            <img src="images/skills/html5.png" alt="HTML5">
+                        </div>
+                    </div>
+                    <div class="skill-card" title="CSS3">
+                        <div class="skill-icon">
+                            <img src="images/skills/css3.png" alt="CSS3">
+                        </div>
+                    </div>
+                    <div class="skill-card" title="JavaScript">
+                        <div class="skill-icon">
+                            <img src="images/skills/javascript.png" alt="JavaScript">
+                        </div>
+                    </div>
+                    <div class="skill-card" title="React">
+                        <div class="skill-icon">
+                            <img src="images/skills/react.png" alt="React">
+                        </div>
+                    </div>
+                    <div class="skill-card" title="Redux">
+                        <div class="skill-icon">
+                            <img src="images/skills/redux.png" alt="Redux">
+                        </div>
+                    </div>
+                    <div class="skill-card" title="Bootstrap">
+                        <div class="skill-icon">
+                            <img src="images/skills/bootstrap.png" alt="Bootstrap">
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
-            <div class="services-box">
-                <i class='bx bx-question-mark'></i>
-                <h3>Why Choose me for Your Front-End Needs?</h3>
-                <p>my seasoned front-end developer lives and breathes web design. With a wealth of experience, I
-                    creating visually stunning, pixel-perfect websites and web applications.</p>
-                <a href="https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg?w=1060&t=st=1696363218~exp=1696363818~hmac=94af7bfdb93605088aa385f2de866f7c243965c7bf821c358b75fe1ba7432480"
-                    target="_blank" class="btn">read More</a>
+            <!-- Backend Skills -->
+            <div class="skill-category" data-scroll-reveal>
+                <div class="category-header">
+                    <i class='bx bx-server category-icon'></i>
+                    <h3>Backend</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card" title="Node.js">
+                        <div class="skill-icon">
+                            <img src="images/skills/nodejs.png" alt="Node.js">
+                        </div>
+                    </div>
+                    <div class="skill-card" title="Express.js">
+                        <div class="skill-icon">
+                            <img src="images/skills/express.png" alt="Express.js">
+                        </div>
+                    </div>
+                    <div class="skill-card" title="MongoDB">
+                        <div class="skill-icon">
+                            <img src="images/skills/mongodb.png" alt="MongoDB">
+                        </div>
+                    </div>
+                    <div class="skill-card" title="PostgreSQL">
+                        <div class="skill-icon">
+                            <img src="images/skills/postgresql.png" alt="PostgreSQL">
+                        </div>
+                    </div>
+                    <div class="skill-card" title="SQL">
+                        <div class="skill-icon">
+                            <img src="images/skills/mysql.png" alt="SQL">
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
-            <div class="services-box">
-                <i class='bx bx-bar-chart-alt'></i>
-                <h3>Cutting-Edge Technology</h3>
-                <p>I stay ahead of the curve with the latest front-end technologies and trends. From HTML5 and CSS3 to
-                    JavaScript frameworks like bootstrap, I've got it covered.</p>
-                <a href="https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg?w=1060&t=st=1696363218~exp=1696363818~hmac=94af7bfdb93605088aa385f2de866f7c243965c7bf821c358b75fe1ba7432480"
-                    target="_blank" class="btn">read More</a>
-            </div>
+            <!-- Tools & Platforms -->
+            <div class="skill-category" data-scroll-reveal>
+                <div class="category-header">
+                    <i class='bx bx-wrench category-icon'></i>
+                    <h3>Tools & Cloud</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card" title="Git">
+                        <div class="skill-icon">
+                            <img src="images/skills/git.png" alt="Git">
+                        </div>
+                    </div>
+                    <div class="skill-card" title="GitHub">
+                        <div class="skill-icon">
+                            <img src="images/skills/github.png" alt="GitHub">
+                        </div>
+                    </div>
 
+                    <div class="skill-card" title="Figma">
+                        <div class="skill-icon">
+                            <img src="images/skills/figma.png" alt="Figma">
+                        </div>
+                    </div>
+                    <div class="skill-card" title="VS Code">
+                        <div class="skill-icon">
+                            <img src="images/skills/vscode.png" alt="VS Code">
+                        </div>
+                    </div>
+                    <div class="skill-card" title="Postman">
+                        <div class="skill-icon">
+                            <img src="images/skills/postman.png" alt="Postman">
+                        </div>
+                    </div>
+                    <div class="skill-card" title="Docker">
+                        <div class="skill-icon">
+                            <img src="images/skills/docker.png" alt="Docker">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+
+
+    <!-- projects section design -->
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Featured <span>Projects</span></h2>
+        <p class="section-subtitle">Showcasing my best work and creative solutions</p>
+
+        <!-- Project Filter Tabs -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="mern">MERN Stack</button>
+            <button class="filter-btn" data-filter="react">React</button>
+            <button class="filter-btn" data-filter="html-css-js">HTML/CSS/JS</button>
+        </div>
+
+        <div class="portfolio-container">
+            <!-- MERN Stack Projects -->
+            <div class="portfolio-box" data-category="mern" data-scroll-reveal>
+                <div class="project-image-wrapper">
+                    <img src="images/Projects/HobbyWheels.png" alt="E-Commerce Platform">
+                    <div class="project-hover-overlay">
+                        <div class="project-actions">
+                            <a href="https://sreeraj100.github.io/HobbyWheels/" target="_blank" class="action-btn">
+                                <i class='bx bx-link-external'></i>
+                                <span>View Live</span>
+                            </a>
+                            <a href="https://github.com/Sreeraj100/HobbyWheels" target="_blank" class="action-btn">
+                                <i class='bx bxl-github'></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3 class="project-name">E-Commerce Platform</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more MERN projects here (copy the structure above) -->
+            <div class="portfolio-box" data-category="mern" data-scroll-reveal>
+                <div class="project-image-wrapper">
+                    <img src="images/Projects/HobbyWheels.png" alt="Social Media App">
+                    <div class="project-hover-overlay">
+                        <div class="project-actions">
+                            <a href="#" target="_blank" class="action-btn">
+                                <i class='bx bx-link-external'></i>
+                                <span>View Live</span>
+                            </a>
+                            <a href="#" target="_blank" class="action-btn">
+                                <i class='bx bxl-github'></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3 class="project-name">Social Media App</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- React Projects -->
+            <div class="portfolio-box" data-category="react" data-scroll-reveal>
+                <div class="project-image-wrapper">
+                    <img src="images/Projects/HobbyWheels.png" alt="Weather Dashboard">
+                    <div class="project-hover-overlay">
+                        <div class="project-actions">
+                            <a href="#" target="_blank" class="action-btn">
+                                <i class='bx bx-link-external'></i>
+                                <span>View Live</span>
+                            </a>
+                            <a href="#" target="_blank" class="action-btn">
+                                <i class='bx bxl-github'></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3 class="project-name">Weather Dashboard</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">API</span>
+                        <span class="tech-tag">Hooks</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-category="react" data-scroll-reveal>
+                <div class="project-image-wrapper">
+                    <img src="images/Projects/HobbyWheels.png" alt="Task Manager">
+                    <div class="project-hover-overlay">
+                        <div class="project-actions">
+                            <a href="#" target="_blank" class="action-btn">
+                                <i class='bx bx-link-external'></i>
+                                <span>View Live</span>
+                            </a>
+                            <a href="#" target="_blank" class="action-btn">
+                                <i class='bx bxl-github'></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3 class="project-name">Task Manager</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Redux</span>
+                        <span class="tech-tag">LocalStorage</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HTML/CSS/JS Projects -->
+            <div class="portfolio-box" data-category="html-css-js" data-scroll-reveal>
+                <div class="project-image-wrapper">
+                    <img src="images/Projects/StarBucks.png" alt="Starbucks Clone">
+                    <div class="project-hover-overlay">
+                        <div class="project-actions">
+                            <a href="https://sreeraj100.github.io/Starbucks-clone/" target="_blank" class="action-btn">
+                                <i class='bx bx-link-external'></i>
+                                <span>View Live</span>
+                            </a>
+                            <a href="https://github.com/Sreeraj100/Starbucks-clone" target="_blank" class="action-btn">
+                                <i class='bx bxl-github'></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3 class="project-name">Starbucks Clone</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Responsive</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-category="html-css-js" data-scroll-reveal>
+                <div class="project-image-wrapper">
+                    <img src="images/Projects/7up.png" alt="7up Clone">
+                    <div class="project-hover-overlay">
+                        <div class="project-actions">
+                            <a href="https://sreeraj100.github.io/7up-clone/" target="_blank" class="action-btn">
+                                <i class='bx bx-link-external'></i>
+                                <span>View Live</span>
+                            </a>
+                            <a href="https://github.com/Sreeraj100/7up-clone" target="_blank" class="action-btn">
+                                <i class='bx bxl-github'></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3 class="project-name">7up Clone</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">UI/UX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-category="html-css-js" data-scroll-reveal>
+                <div class="project-image-wrapper">
+                    <img src="images/Projects/FaceBook.png" alt="Facebook Clone">
+                    <div class="project-hover-overlay">
+                        <div class="project-actions">
+                            <a href="https://sreeraj100.github.io/facebook-clone/" target="_blank" class="action-btn">
+                                <i class='bx bx-link-external'></i>
+                                <span>View Live</span>
+                            </a>
+                            <a href="https://github.com/Sreeraj100/facebook-clone" target="_blank" class="action-btn">
+                                <i class='bx bxl-github'></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3 class="project-name">Facebook Clone</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Forms</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-category="html-css-js" data-scroll-reveal>
+                <div class="project-image-wrapper">
+                    <img src="images/Projects/HobbyWheels.png" alt="HobbyWheels">
+                    <div class="project-hover-overlay">
+                        <div class="project-actions">
+                            <a href="https://sreeraj100.github.io/HobbyWheels/" target="_blank" class="action-btn">
+                                <i class='bx bx-link-external'></i>
+                                <span>View Live</span>
+                            </a>
+                            <a href="https://github.com/Sreeraj100/HobbyWheels" target="_blank" class="action-btn">
+                                <i class='bx bxl-github'></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3 class="project-name">HobbyWheels</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
 
     <!-- education section -->
 
@@ -189,134 +545,6 @@
                 </div>
             </div>
 
-    </section>
-
-    <!-- projects section design -->
-
-    <section class="portfolio" id="portfolio">
-
-        <h2 class="heading">Latest <span>Project</span></h2>
-
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-
-                <img src="StarBucks.png" alt="">
-
-                <div class="portfolio-layer">
-
-                    <h4>Web Design</h4>
-
-                    <p> Created a basic StarBucks website using HTML and CSS involves replicating some of the core
-                        features and layout of the StarBucks website.</p>
-                    <a href="https://sreeraj100.github.io/Starbucks-clone/" target="_blank"><i
-                            class='bx bx-link-external'></i></a>
-
-                </div>
-
-            </div>
-
-            <div class="portfolio-box">
-
-                <img src="7up.png" alt="">
-
-                <div class="portfolio-layer">
-
-                    <h4>Web Design</h4>
-
-                    <p> Created a 7up.com clone website using HTML and CSS involves replicating some of the core
-                        features and layout of the 7up website.</p>
-                    <a href="https://sreeraj100.github.io/7up-clone/" target="_blank"><i
-                            class='bx bx-link-external'></i></a>
-
-                </div>
-
-            </div>
-            <div class="portfolio-box">
-
-                <img src="FaceBook.png" alt="">
-
-                <div class="portfolio-layer">
-
-                    <h4>Web Design</h4>
-
-                    <p> Created a Facebook login page clone website using HTML and CSS involves replicating some of the
-                        core
-                        features and layout of the facebook website.</p>
-                    <a href="https://sreeraj100.github.io/facebook-clone/" target="_blank"><i
-                            class='bx bx-link-external'></i></a>
-
-                </div>
-
-            </div>
-            <!-----new------>
-            <div class="portfolio-box">
-
-                <img src="HobbyWheels.png" alt="">
-
-                <div class="portfolio-layer">
-
-                    <h4>Web Design</h4>
-
-                    <p> Created a responsive website using Html,CSS,JS & bootstrap.</p>
-                    <a href="https://sreeraj100.github.io/HobbyWheels/" target="_blank"><i class='bx bx-link-external'></i></a>
-
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- skills section design -->
-
-    <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
-
-        <div class="skills-row">
-            <div class="skills-column">
-                <h3 class="title">Coding Skills</h3>
-
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>HTML <span>80%</span></h3>
-                            <div class="bar"><span style="width: 80%;"></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>CSS <span>50%</span></h3>
-                            <div class="bar"><span style="width: 50%;"></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Javascript <span>25%</span></h3>
-                            <div class="bar"><span style="width: 25%;"></span></div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills-column">
-                <h3 class="title">Professional Skills</h3>
-
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>Web Design <span>50%</span></h3>
-                            <div class="bar"><span style="width: 50%;"></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Web Development <span>20%</span></h3>
-                            <div class="bar"><span style="width: 20%;"></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
     </section>
 
     <!--------Contact form-------->
