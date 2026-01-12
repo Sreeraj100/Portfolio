@@ -222,7 +222,7 @@ window.addEventListener('mousemove', function (e) {
     cursorOutline.animate({
         left: `${posX}px`,
         top: `${posY}px`
-    }, { duration: 500, fill: "forwards" });
+    }, { duration: 100, fill: "forwards" });
 });
 
 // Touch support for cursor visibility
@@ -250,7 +250,7 @@ window.addEventListener('touchmove', function (e) {
     cursorOutline.animate({
         left: `${posX}px`,
         top: `${posY}px`
-    }, { duration: 500, fill: "forwards" });
+    }, { duration: 100, fill: "forwards" });
 });
 
 window.addEventListener('touchend', function () {

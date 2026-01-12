@@ -164,6 +164,11 @@
                             <img src="images/skills/javascript.png" alt="JavaScript">
                         </div>
                     </div>
+                    <div class="skill-card" title="TypeScript">
+                        <div class="skill-icon">
+                            <img src="images/skills/typescript.png" alt="TypeScript">
+                        </div>
+                    </div>
                     <div class="skill-card" title="React">
                         <div class="skill-icon">
                             <img src="images/skills/react.png" alt="React">
@@ -179,6 +184,11 @@
                             <img src="images/skills/bootstrap.png" alt="Bootstrap">
                         </div>
                     </div>
+                    <div class="skill-card" title="Tailwind CSS">
+                        <div class="skill-icon">
+                            <img src="images/skills/tailwindcss.png" alt="Tailwind CSS">
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -191,12 +201,12 @@
                 </div>
                 <div class="skills-grid">
                     <div class="skill-card" title="Node.js">
-                        <div class="skill-icon">
+                        <div class="skill-icons">
                             <img src="images/skills/nodejs.png" alt="Node.js">
                         </div>
                     </div>
                     <div class="skill-card" title="Express.js">
-                        <div class="skill-icon">
+                        <div class="skill-icons">
                             <img src="images/skills/express.png" alt="Express.js">
                         </div>
                     </div>
@@ -267,10 +277,7 @@
 
 
     <section class="portfolio" id="portfolio">
-        <h2 class="heading">Featured <span>Projects</span></h2>
-        <p class="section-subtitle">Showcasing my best work and creative solutions</p>
-
-
+        <h2 class="heading"><span>Projects</span></h2>
         <div class="project-filters">
             <button class="filter-btn active" data-filter="mern">MERN Stack</button>
             <button class="filter-btn" data-filter="react">React</button>
@@ -311,14 +318,15 @@
 
             <div class="portfolio-box" data-category="react" data-scroll-reveal>
                 <div class="project-image-wrapper">
-                    <img src="images/Projects/HobbyWheels.png" alt="Weather Dashboard">
+                    <img src="images/Projects/netflix.png" alt="Weather Dashboard">
                     <div class="project-hover-overlay">
                         <div class="project-actions">
                             <a href="#" target="_blank" class="action-btn">
                                 <i class='bx bx-link-external'></i>
                                 <span>View Live</span>
                             </a>
-                            <a href="#" target="_blank" class="action-btn">
+                            <a href="https://github.com/Sreeraj100/Netflix-Clone-React" target="_blank"
+                                class="action-btn">
                                 <i class='bx bxl-github'></i>
                                 <span>View Code</span>
                             </a>
@@ -326,25 +334,26 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <h3 class="project-name">Weather Dashboard</h3>
+                    <h3 class="project-name">Netflix-Clone-React</h3>
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
-                        <span class="tech-tag">API</span>
-                        <span class="tech-tag">Hooks</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">LocalStorage</span>
+                        <span class="tech-tag">CSS</span>
                     </div>
                 </div>
             </div>
 
             <div class="portfolio-box" data-category="react" data-scroll-reveal>
                 <div class="project-image-wrapper">
-                    <img src="images/Projects/HobbyWheels.png" alt="Task Manager">
+                    <img src="images/Projects/olx.png" alt="Task Manager">
                     <div class="project-hover-overlay">
                         <div class="project-actions">
                             <a href="#" target="_blank" class="action-btn">
                                 <i class='bx bx-link-external'></i>
                                 <span>View Live</span>
                             </a>
-                            <a href="#" target="_blank" class="action-btn">
+                            <a href="https://github.com/Sreeraj100/OLX-Clone-React" target="_blank" class="action-btn">
                                 <i class='bx bxl-github'></i>
                                 <span>View Code</span>
                             </a>
@@ -352,22 +361,71 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <h3 class="project-name">Task Manager</h3>
+                    <h3 class="project-name">OLX-Clone-React</h3>
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
-                        <span class="tech-tag">Redux</span>
+                        <span class="tech-tag">Firebase</span>
                         <span class="tech-tag">LocalStorage</span>
+                        <span class="tech-tag">TailwindCSS</span>
                     </div>
                 </div>
             </div>
 
+            <div class="portfolio-box" data-category="react" data-scroll-reveal>
+                <div class="project-image-wrapper">
+                    <img src="images/Projects/terralink.png" alt="Task Manager">
+                    <div class="project-hover-overlay">
+                        <div class="project-actions">
+                            <a href="https://terralink-support.netlify.app/" target="_blank" class="action-btn">
+                                <i class='bx bx-link-external'></i>
+                                <span>View Live</span>
+                            </a>
+                            <a href="https://github.com/Sreeraj100/Terralink" target="_blank" class="action-btn">
+                                <i class='bx bxl-github'></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3 class="project-name">Terralink</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-category="html-css-js" data-scroll-reveal>
+                <div class="project-image-wrapper">
+                    <img src="images/Projects/galaxydoors.png" alt="Starbucks Clone">
+                    <div class="project-hover-overlay">
+                        <div class="project-actions">
+                            <a href="https://galaxydoors.netlify.app" target="_blank" class="action-btn">
+                                <i class='bx bx-link-external'></i>
+                                <span>View Live</span>
+                            </a>
+                            <a href="https://github.com/Sreeraj100/Galaxy-Doors" target="_blank" class="action-btn">
+                                <i class='bx bxl-github'></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3 class="project-name">GalaxyDoors</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                </div>
+            </div>
 
             <div class="portfolio-box" data-category="html-css-js" data-scroll-reveal>
                 <div class="project-image-wrapper">
                     <img src="images/Projects/StarBucks.png" alt="Starbucks Clone">
                     <div class="project-hover-overlay">
                         <div class="project-actions">
-                            <a href="https://sreeraj100.github.io/Starbucks-clone/" target="_blank" class="action-btn">
+                            <a href="https://starbuckz.netlify.app" target="_blank" class="action-btn">
                                 <i class='bx bx-link-external'></i>
                                 <span>View Live</span>
                             </a>
@@ -458,7 +516,6 @@
                     <div class="project-tech">
                         <span class="tech-tag">HTML5</span>
                         <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">Bootstrap</span>
                     </div>
                 </div>
@@ -567,7 +624,7 @@
 
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2023 by Sreeraj | All Rights Reserved.</p>
+            <p>Copyright &copy; 2026 by Sreeraj | All Rights Reserved.</p>
         </div>
     </footer>
 
