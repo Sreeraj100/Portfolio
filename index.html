@@ -6,32 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-        content="Sreeraj R - MERN Stack Developer | Full Stack Web Developer specializing in MongoDB, Express.js, React.js, and Node.js" />
+        content="Sreeraj R - MERN Stack Developer | Full Stack Web Developer specializing in MongoDB, Express.js, React.js, and Node.js. Check out my portfolio to see my projects and skills." />
     <meta name="keywords"
-        content="MERN Stack Developer, Full Stack Developer, Web Developer, React, Node.js, MongoDB" />
+        content="Sreeraj R, MERN Stack Developer, Full Stack Developer, Web Developer, React Developer, Node.js Developer, Portfolio, MongoDB, Express.js" />
     <meta name="author" content="Sreeraj R" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sreeraj100.github.io/" />
+    <meta property="og:title" content="Sreeraj R | MERN Stack Developer" />
+    <meta property="og:description"
+        content="Passionate Full Stack Web Developer with expertise in crafting engaging and responsive web experiences using modern technologies." />
+    <meta property="og:image" content="images/sreeraj.jpg" />
+
+    <meta name="robots" content="index, follow" />
+
+    <link rel="icon" href="images/portfolio.png" type="image/jpeg">
     <title>Sreeraj R</title>
 
-    <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- box icons -->
+
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-    <!-- Font Awesome for skill icons -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     <link rel="stylesheet" href="style.css" />
 
-    <!-- ajax script -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
+
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
 
     <header class="header">
         <a href="#" class="logo"><b>Sreeraj.R</b></a>
@@ -47,10 +62,10 @@
         </nav>
 
     </header>
-    <!-- home section design -->
+
 
     <section class="home" id="home">
-        <div class="hero-bg-animation"></div>
+        <canvas id="hero-canvas"></canvas>
 
         <div class="home-content" data-scroll-reveal>
             <div class="hero-text-wrapper">
@@ -102,7 +117,7 @@
     </section>
 
 
-    <!-- about section design -->
+
 
     <section class="about" id="about">
         <div class="about-img">
@@ -120,14 +135,14 @@
 
 
 
-    <!-- skills section design -->
+
 
     <section class="skills" id="skills">
         <h2 class="heading">My <span>Skills</span></h2>
         <p class="section-subtitle">Technologies I work with</p>
 
         <div class="skills-container">
-            <!-- Frontend Skills -->
+
             <div class="skill-category" data-scroll-reveal>
                 <div class="category-header">
                     <i class='bx bx-code-alt category-icon'></i>
@@ -168,7 +183,7 @@
                 </div>
             </div>
 
-            <!-- Backend Skills -->
+
             <div class="skill-category" data-scroll-reveal>
                 <div class="category-header">
                     <i class='bx bx-server category-icon'></i>
@@ -204,7 +219,7 @@
                 </div>
             </div>
 
-            <!-- Tools & Platforms -->
+
             <div class="skill-category" data-scroll-reveal>
                 <div class="category-header">
                     <i class='bx bx-wrench category-icon'></i>
@@ -249,13 +264,13 @@
 
 
 
-    <!-- projects section design -->
+
 
     <section class="portfolio" id="portfolio">
         <h2 class="heading">Featured <span>Projects</span></h2>
         <p class="section-subtitle">Showcasing my best work and creative solutions</p>
 
-        <!-- Project Filter Tabs -->
+
         <div class="project-filters">
             <button class="filter-btn active" data-filter="mern">MERN Stack</button>
             <button class="filter-btn" data-filter="react">React</button>
@@ -263,10 +278,10 @@
         </div>
 
         <div class="portfolio-container">
-            <!-- MERN Stack Projects -->
+
             <div class="portfolio-box" data-category="mern" data-scroll-reveal>
                 <div class="project-image-wrapper">
-                    <img src="images/Projects/decibelx.png" alt="E-Commerce Platform">
+                    <img src="images/Projects/decibelx.png" alt="DecibelX-Ecommerce-website">
                     <div class="project-hover-overlay">
                         <div class="project-actions">
                             <a href="https://decibelx.shop/" target="_blank" class="action-btn">
@@ -282,7 +297,7 @@
                     </div>
                 </div>
                 <div class="project-details">
-                    <h3 class="project-name">E-Commerce Platform</h3>
+                    <h3 class="project-name">DecibelX-Ecommerce-website</h3>
                     <div class="project-tech">
                         <span class="tech-tag">MongoDB</span>
                         <span class="tech-tag">Express</span>
@@ -293,7 +308,7 @@
             </div>
 
 
-            <!-- React Projects -->
+
             <div class="portfolio-box" data-category="react" data-scroll-reveal>
                 <div class="project-image-wrapper">
                     <img src="images/Projects/HobbyWheels.png" alt="Weather Dashboard">
@@ -346,7 +361,7 @@
                 </div>
             </div>
 
-            <!-- HTML/CSS/JS Projects -->
+
             <div class="portfolio-box" data-category="html-css-js" data-scroll-reveal>
                 <div class="project-image-wrapper">
                     <img src="images/Projects/StarBucks.png" alt="Starbucks Clone">
@@ -454,7 +469,7 @@
 
 
 
-    <!-- education section -->
+
 
 
     <section class="education" id="education">
@@ -504,24 +519,13 @@
 
                         </div>
                     </div>
-                    <!-- <div class="education-box">
-                        <div class="education-content">
-                            <div class="content">
-                                <div class="year"><i class='bx bxs-calendar'></i>passed-out in 2019</div>
-                                <h3>Vocational Higher Secondary Education</h3>
-                                <p>Electrical & Electronics technology</p>
-                                <p>2017-2019</p>
 
-                            </div>
-                        </div>
-
-                    </div> -->
                 </div>
             </div>
 
     </section>
 
-    <!--------Contact form-------->
+
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
@@ -560,20 +564,20 @@
         </form>
     </section>
 
-    <!-- footer design -->
+
     <footer class="footer">
         <div class="footer-text">
             <p>Copyright &copy; 2023 by Sreeraj | All Rights Reserved.</p>
         </div>
-        <div class="footer-icontop">
-            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-        </div>
     </footer>
 
-    <!-- scroll reveal -->
+
+    <a href="#home" class="scroll-top-btn"><i class='bx bx-up-arrow-alt'></i></a>
+
+
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- typed js -->
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
@@ -585,7 +589,7 @@
         integrity="sha512-TiQST7x/0aMjgVTcep29gi+q5Lk5gVTUPE9XgN0g96rwtjEjLpod4mlBRKWHeBcvGBAEvJBmfDqh2hfMMmg+5A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- custom js -->
+
     <script src="script.js"></script>
 </body>
 

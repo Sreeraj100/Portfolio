@@ -1,13 +1,6 @@
-/* ============================================
-   MODERN PORTFOLIO - PREMIUM DESIGN SYSTEM
-   ============================================ */
-
-/* Import Premium Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-/* ============================================
-   CSS RESET & BASE STYLES
-   ============================================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,43 +11,43 @@
 }
 
 :root {
-    /* Color System */
+
     --bg-color: #0a0a0a;
     --second-bg-color: #131313;
     --card-bg: #1a1a1a;
     --text-color: #ffffff;
     --text-secondary: #a0a0a0;
 
-    /* Brand Colors */
+
     --primary-color: #8b5cf6;
     --primary-dark: #7c3aed;
     --primary-light: #a78bfa;
     --accent-color: #ec4899;
 
-    /* Gradients */
+
     --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
     --gradient-secondary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
     --gradient-bg: linear-gradient(180deg, #0a0a0a 0%, #1a0a2e 100%);
 
-    /* Shadows & Glows */
+
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
     --glow-primary: 0 0 20px rgba(139, 92, 246, 0.3);
     --glow-accent: 0 0 30px rgba(236, 72, 153, 0.4);
 
-    /* Spacing */
+
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
 
-    /* Typography */
+
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-heading: 'Space Grotesk', 'Inter', sans-serif;
 
-    /* Transitions */
+
     --transition-fast: 0.2s ease;
     --transition-base: 0.3s ease;
     --transition-slow: 0.5s ease;
@@ -62,7 +55,7 @@
 
 html {
     font-size: 62.5%;
-    /* 1rem = 10px */
+
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -82,9 +75,7 @@ section {
     position: relative;
 }
 
-/* ============================================
-   TYPOGRAPHY
-   ============================================ */
+
 .heading {
     text-align: center;
     font-size: clamp(3.5rem, 5vw, 5.5rem);
@@ -109,9 +100,7 @@ section {
     font-weight: 400;
 }
 
-/* ============================================
-   HEADER / NAVIGATION
-   ============================================ */
+
 .header {
     position: fixed;
     top: 0;
@@ -132,6 +121,10 @@ section {
 .header.sticky {
     background: rgba(10, 10, 10, 0.95);
     box-shadow: var(--shadow-md);
+}
+
+.header.hidden {
+    transform: translateY(-100%);
 }
 
 .logo {
@@ -183,9 +176,7 @@ section {
     cursor: pointer;
 }
 
-/* ============================================
-   HERO SECTION
-   ============================================ */
+
 .home {
     display: flex;
     justify-content: space-between;
@@ -195,29 +186,16 @@ section {
     overflow: hidden;
 }
 
-/* Animated Background */
-.hero-bg-animation {
+
+
+#hero-canvas {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
-    animation: bgPulse 10s ease-in-out infinite;
     z-index: -1;
-}
-
-@keyframes bgPulse {
-
-    0%,
-    100% {
-        opacity: 0.3;
-    }
-
-    50% {
-        opacity: 0.6;
-    }
+    opacity: 0.25;
 }
 
 .home-content {
@@ -269,7 +247,7 @@ section {
     animation: fadeInUp 0.6s ease 0.8s both;
 }
 
-/* Social Media Links */
+
 .social-media {
     display: flex;
     gap: 1.5rem;
@@ -320,7 +298,7 @@ section {
     filter: brightness(0) invert(1);
 }
 
-/* CTA Buttons */
+
 .cta-buttons {
     display: flex;
     gap: 2rem;
@@ -367,12 +345,12 @@ section {
     box-shadow: var(--glow-primary);
 }
 
-/* Magnetic Button Effect */
+
 .magnetic-btn {
     transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Hero Image */
+
 .home-img {
     flex: 1;
     display: flex;
@@ -449,9 +427,7 @@ section {
     }
 }
 
-/* ============================================
-   ABOUT SECTION
-   ============================================ */
+
 .about {
     display: flex;
     justify-content: center;
@@ -498,9 +474,7 @@ section {
     margin-bottom: 3rem;
 }
 
-/* ============================================
-   SERVICES SECTION
-   ============================================ */
+
 .services {
     background: var(--bg-color);
 }
@@ -568,9 +542,7 @@ section {
     margin-bottom: 2rem;
 }
 
-/* ============================================
-   EDUCATION / JOURNEY SECTION
-   ============================================ */
+
 .education {
     background: var(--second-bg-color);
     padding: 8rem 9% 5rem;
@@ -671,14 +643,12 @@ section {
     line-height: 1.6;
 }
 
-/* ============================================
-   PROJECTS SECTION (FILTERABLE GALLERY)
-   ============================================ */
+
 .portfolio {
     background: var(--bg-color);
 }
 
-/* Project Filter Tabs */
+
 .project-filters {
     display: flex;
     justify-content: center;
@@ -713,7 +683,7 @@ section {
     box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
 }
 
-/* Portfolio Container */
+
 .portfolio-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -721,7 +691,7 @@ section {
     margin-top: 4rem;
 }
 
-/* Portfolio Box - Compact Design */
+
 .portfolio-box {
     background: var(--card-bg);
     border-radius: 15px;
@@ -737,7 +707,7 @@ section {
     box-shadow: 0 12px 40px rgba(139, 92, 246, 0.2);
 }
 
-/* Hide projects by default (for filtering) */
+
 .portfolio-box {
     display: block;
     animation: fadeIn 0.5s ease;
@@ -759,7 +729,7 @@ section {
     }
 }
 
-/* Project Image Wrapper - Hover-only buttons */
+
 .project-image-wrapper {
     position: relative;
     width: 100%;
@@ -770,7 +740,7 @@ section {
 .project-image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     transition: var(--transition-slow);
 }
 
@@ -778,7 +748,7 @@ section {
     transform: scale(1.08);
 }
 
-/* Hover Overlay - Only appears on hover */
+
 .project-hover-overlay {
     position: absolute;
     inset: 0;
@@ -794,7 +764,7 @@ section {
     opacity: 1;
 }
 
-/* Project Actions - Buttons appear only on hover */
+
 .project-actions {
     display: flex;
     gap: 1.5rem;
@@ -837,7 +807,7 @@ section {
     border-color: var(--primary-color);
 }
 
-/* Project Details - Always visible */
+
 .project-details {
     padding: 2rem;
 }
@@ -872,7 +842,7 @@ section {
     transform: translateY(-2px);
 }
 
-/* Responsive adjustments for project gallery */
+
 @media (max-width: 768px) {
     .portfolio-container {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -941,9 +911,7 @@ section {
     }
 }
 
-/* ============================================
-   SKILLS SECTION (NEW DESIGN)
-   ============================================ */
+
 .skills {
     background: var(--second-bg-color);
     padding: 8rem 9% 5rem;
@@ -997,7 +965,7 @@ section {
     gap: 1.5rem;
 }
 
-/* Skill Card - Real Icon Style */
+
 .skill-card {
     display: flex;
     flex-direction: column;
@@ -1006,12 +974,12 @@ section {
     gap: 0;
     padding: 1rem;
     aspect-ratio: 1/1;
-    /* Ensure square shape like app icons */
+
     background: rgba(255, 255, 255, 0.03);
-    /* Glassmorphic base */
+
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 18px;
-    /* Apps style rounded corners */
+
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     cursor: pointer;
     position: relative;
@@ -1026,10 +994,10 @@ section {
     box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
 }
 
-/* Icon Styling */
+
 .skill-icon {
     width: 75%;
-    /* Proportional size relative to card */
+
     height: 75%;
     display: flex;
     align-items: center;
@@ -1046,10 +1014,10 @@ section {
 
 .skill-card:hover .skill-icon {
     transform: scale(1.15);
-    /* Pop effect */
+
 }
 
-/* Shining Effect Logic */
+
 .skill-card::before {
     content: '';
     position: absolute;
@@ -1085,9 +1053,7 @@ section {
     display: none;
 }
 
-/* ============================================
-   CONTACT SECTION
-   ============================================ */
+
 .contact {
     background: var(--bg-color);
     padding: 8rem 9% 5rem;
@@ -1150,9 +1116,7 @@ section {
     margin-top: 0.5rem;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -1168,29 +1132,41 @@ section {
     color: var(--text-secondary);
 }
 
-.footer-icontop a {
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
     background: var(--gradient-primary);
     border-radius: 10px;
+    z-index: 1000;
     transition: var(--transition-base);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
 }
 
-.footer-icontop a:hover {
-    transform: translateY(-3px);
+.scroll-top-btn.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+    transform: translateY(-5px);
     box-shadow: var(--glow-primary);
 }
 
-.footer-icontop a i {
+.scroll-top-btn i {
     font-size: 2.4rem;
     color: white;
 }
 
-/* ============================================
-   SCROLL REVEAL ANIMATIONS
-   ============================================ */
+
 [data-scroll-reveal] {
     opacity: 0;
     transform: translateY(50px);
@@ -1202,9 +1178,7 @@ section {
     transform: translateY(0);
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
+
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -1238,7 +1212,7 @@ section {
     }
 
     .about {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .about-img img {
@@ -1331,4 +1305,33 @@ section {
         gap: 2rem;
         text-align: center;
     }
+}
+
+
+.cursor-dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--primary-color);
+}
+
+.cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(139, 92, 246, 0.5);
+}
+
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+body:hover .cursor-dot,
+body:hover .cursor-outline {
+    opacity: 1;
 }

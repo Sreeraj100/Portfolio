@@ -1,4 +1,4 @@
-/*==================== MOBILE MENU TOGGLE ====================*/
+
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -7,16 +7,20 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('.navbar a');
+let scrollBtn = document.querySelector('.scroll-top-btn');
+let lastScrollTop = 0;
 
 window.onscroll = () => {
-    // Close mobile menu on scroll
+    
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 
-    // Update active nav link based on scroll position
+    let currentScroll = window.scrollY;
+
+    
     sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 150;
@@ -27,16 +31,32 @@ window.onscroll = () => {
             navLinks.forEach(link => {
                 link.classList.remove('active');
             });
-            document.querySelector('.navbar a[href*=' + id + ']').classList.add('active');
+            let activeLink = document.querySelector('.navbar a[href*=' + id + ']');
+            if (activeLink) activeLink.classList.add('active');
         }
     });
 
-    // Sticky header
+    
     let header = document.querySelector('.header');
-    header.classList.toggle('sticky', window.scrollY > 100);
+    header.classList.toggle('sticky', currentScroll > 100);
+
+    
+    if (currentScroll > lastScrollTop && currentScroll > 100) {
+        header.classList.add('hidden');
+    } else {
+        header.classList.remove('hidden');
+    }
+    lastScrollTop = currentScroll;
+
+    
+    if (currentScroll > 100) {
+        scrollBtn.classList.add('active');
+    } else {
+        scrollBtn.classList.remove('active');
+    }
 };
 
-/*==================== SCROLL REVEAL ANIMATION ====================*/
+
 function revealOnScroll() {
     const reveals = document.querySelectorAll('[data-scroll-reveal]');
 
@@ -53,19 +73,19 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
-/*==================== PROJECT FILTERING ====================*/
+
 document.addEventListener('DOMContentLoaded', function () {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectBoxes = document.querySelectorAll('.portfolio-box');
 
-    // Function to filter projects
+    
     function filterProjects(category) {
         projectBoxes.forEach(box => {
             const boxCategory = box.getAttribute('data-category');
 
             if (category === 'all' || boxCategory === category) {
                 box.classList.remove('hidden');
-                // Add fade-in animation
+                
                 setTimeout(() => {
                     box.style.opacity = '1';
                     box.style.transform = 'scale(1)';
@@ -78,28 +98,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Set MERN Stack as default on page load
+    
     filterProjects('mern');
 
-    // Add click event to filter buttons
+    
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function () {
-            // Remove active class from all buttons
+            
             filterBtns.forEach(b => b.classList.remove('active'));
 
-            // Add active class to clicked button
+            
             this.classList.add('active');
 
-            // Get filter category
+            
             const filterValue = this.getAttribute('data-filter');
 
-            // Filter projects
+            
             filterProjects(filterValue);
         });
     });
 });
 
-/*==================== TYPED.JS EFFECT ====================*/
+
 if (typeof Typed !== 'undefined') {
     const typed = new Typed('.multiple-text', {
         strings: ['MERN STACK DEVELOPER', 'Full Stack Developer', 'Web Developer', 'React Developer'],
@@ -110,7 +130,7 @@ if (typeof Typed !== 'undefined') {
     });
 }
 
-/*==================== MAGNETIC BUTTON EFFECT ====================*/
+
 const magneticButtons = document.querySelectorAll('.magnetic-btn');
 
 magneticButtons.forEach(button => {
@@ -127,7 +147,7 @@ magneticButtons.forEach(button => {
     });
 });
 
-/*==================== SMOOTH SCROLL FOR ANCHOR LINKS ====================*/
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -142,7 +162,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-/*==================== FORM VALIDATION ====================*/
+
 $("#submit-form").validate({
     rules: {
         username: {
@@ -158,7 +178,7 @@ $("#submit-form").validate({
             data: $(form).serialize(),
             method: "post",
             success: function (response) {
-                // Show success message
+                
                 const successMsg = document.createElement('div');
                 successMsg.style.cssText = 'position: fixed; top: 20px; right: 20px; background: linear-gradient(135deg, #8b5cf6, #ec4899); color: white; padding: 20px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3); z-index: 10000; font-size: 16px; font-weight: 600;';
                 successMsg.textContent = '✓ Form submitted successfully!';
@@ -171,7 +191,7 @@ $("#submit-form").validate({
                 form.reset();
             },
             error: function (err) {
-                // Show error message
+                
                 const errorMsg = document.createElement('div');
                 errorMsg.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #ef4444; color: white; padding: 20px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3); z-index: 10000; font-size: 16px; font-weight: 600;';
                 errorMsg.textContent = '✗ Something went wrong. Please try again.';
@@ -185,21 +205,71 @@ $("#submit-form").validate({
     }
 });
 
-/*==================== CURSOR TRAIL EFFECT (OPTIONAL) ====================*/
 
 
-const cursor = document.createElement('div');
-cursor.classList.add('custom-cursor');
-document.body.appendChild(cursor);
 
-document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
+
+const cursorDot = document.querySelector('[data-cursor-dot]');
+const cursorOutline = document.querySelector('[data-cursor-outline]');
+
+window.addEventListener('mousemove', function (e) {
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    cursorDot.style.left = `${posX}px`;
+    cursorDot.style.top = `${posY}px`;
+
+    cursorOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+    }, { duration: 500, fill: "forwards" });
 });
 
 
-/*==================== PERFORMANCE OPTIMIZATION ====================*/
-// Lazy load images
+const canvas = document.getElementById('hero-canvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%';
+const fontSize = 14;
+const columns = canvas.width / fontSize;
+
+const drops = [];
+for (let x = 0; x < columns; x++) {
+    drops[x] = 1;
+}
+
+function draw() {
+    ctx.fillStyle = 'rgba(10, 10, 10, 0.1)'; 
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = '#0F0'; 
+    ctx.font = fontSize + 'px monospace';
+
+    for (let i = 0; i < drops.length; i++) {
+        const text = letters.charAt(Math.floor(Math.random() * letters.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0;
+        }
+        drops[i]++;
+    }
+}
+
+setInterval(draw, 33);
+
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
+
+
+
+
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -217,7 +287,6 @@ if ('IntersectionObserver' in window) {
     });
 }
 
-/*==================== CONSOLE EASTER EGG ====================*/
-console.log('%c👋 Hello Developer!', 'color: #8b5cf6; font-size: 24px; font-weight: bold;');
-console.log('%cLike what you see? Let\'s connect!', 'color: #ec4899; font-size: 16px;');
-console.log('%c📧 sreerajsrgmanu@gmail.com', 'color: #a78bfa; font-size: 14px;');
+
+
+
