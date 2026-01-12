@@ -1335,3 +1335,17 @@ body:hover .cursor-dot,
 body:hover .cursor-outline {
     opacity: 1;
 }
+
+@media (max-width: 768px) {
+
+    .cursor-dot,
+    .cursor-outline {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    .cursor-dot.active,
+    .cursor-outline.active {
+        opacity: 1;
+    }
+}

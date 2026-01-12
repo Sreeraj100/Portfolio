@@ -14,13 +14,13 @@ let scrollBtn = document.querySelector('.scroll-top-btn');
 let lastScrollTop = 0;
 
 window.onscroll = () => {
-    
+
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 
     let currentScroll = window.scrollY;
 
-    
+
     sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 150;
@@ -36,11 +36,11 @@ window.onscroll = () => {
         }
     });
 
-    
+
     let header = document.querySelector('.header');
     header.classList.toggle('sticky', currentScroll > 100);
 
-    
+
     if (currentScroll > lastScrollTop && currentScroll > 100) {
         header.classList.add('hidden');
     } else {
@@ -48,7 +48,7 @@ window.onscroll = () => {
     }
     lastScrollTop = currentScroll;
 
-    
+
     if (currentScroll > 100) {
         scrollBtn.classList.add('active');
     } else {
@@ -78,14 +78,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectBoxes = document.querySelectorAll('.portfolio-box');
 
-    
+
     function filterProjects(category) {
         projectBoxes.forEach(box => {
             const boxCategory = box.getAttribute('data-category');
 
             if (category === 'all' || boxCategory === category) {
                 box.classList.remove('hidden');
-                
+
                 setTimeout(() => {
                     box.style.opacity = '1';
                     box.style.transform = 'scale(1)';
@@ -98,22 +98,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    
+
     filterProjects('mern');
 
-    
+
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function () {
-            
+
             filterBtns.forEach(b => b.classList.remove('active'));
 
-            
+
             this.classList.add('active');
 
-            
+
             const filterValue = this.getAttribute('data-filter');
 
-            
+
             filterProjects(filterValue);
         });
     });
@@ -178,7 +178,7 @@ $("#submit-form").validate({
             data: $(form).serialize(),
             method: "post",
             success: function (response) {
-                
+
                 const successMsg = document.createElement('div');
                 successMsg.style.cssText = 'position: fixed; top: 20px; right: 20px; background: linear-gradient(135deg, #8b5cf6, #ec4899); color: white; padding: 20px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3); z-index: 10000; font-size: 16px; font-weight: 600;';
                 successMsg.textContent = '✓ Form submitted successfully!';
@@ -191,7 +191,7 @@ $("#submit-form").validate({
                 form.reset();
             },
             error: function (err) {
-                
+
                 const errorMsg = document.createElement('div');
                 errorMsg.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #ef4444; color: white; padding: 20px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3); z-index: 10000; font-size: 16px; font-weight: 600;';
                 errorMsg.textContent = '✗ Something went wrong. Please try again.';
@@ -225,6 +225,41 @@ window.addEventListener('mousemove', function (e) {
     }, { duration: 500, fill: "forwards" });
 });
 
+// Touch support for cursor visibility
+window.addEventListener('touchstart', function (e) {
+    const posX = e.touches[0].clientX;
+    const posY = e.touches[0].clientY;
+
+    cursorDot.classList.add('active');
+    cursorOutline.classList.add('active');
+
+    cursorDot.style.left = `${posX}px`;
+    cursorDot.style.top = `${posY}px`;
+
+    cursorOutline.style.left = `${posX}px`;
+    cursorOutline.style.top = `${posY}px`;
+});
+
+window.addEventListener('touchmove', function (e) {
+    const posX = e.touches[0].clientX;
+    const posY = e.touches[0].clientY;
+
+    cursorDot.style.left = `${posX}px`;
+    cursorDot.style.top = `${posY}px`;
+
+    cursorOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+    }, { duration: 500, fill: "forwards" });
+});
+
+window.addEventListener('touchend', function () {
+    cursorDot.classList.remove('active');
+    cursorOutline.classList.remove('active');
+});
+
+
+
 
 const canvas = document.getElementById('hero-canvas');
 const ctx = canvas.getContext('2d');
@@ -242,10 +277,10 @@ for (let x = 0; x < columns; x++) {
 }
 
 function draw() {
-    ctx.fillStyle = 'rgba(10, 10, 10, 0.1)'; 
+    ctx.fillStyle = 'rgba(10, 10, 10, 0.1)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = '#0F0'; 
+    ctx.fillStyle = '#0F0';
     ctx.font = fontSize + 'px monospace';
 
     for (let i = 0; i < drops.length; i++) {
