@@ -14,4 +14,4 @@ A personal portfolio website showcasing projects, skills, and contact informatio
 - **Bootstrap**: Responsive layout and pre-designed components.
 
 ## How to Run
-You can view the project by visiting this link: [My Portfolio Live](https://sreeraj100.github.io/Portfolio/)
+You can view the project by visiting this link: [My Portfolio Live](https://sreeraj.online/)
